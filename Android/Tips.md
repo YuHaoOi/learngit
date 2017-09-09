@@ -1,6 +1,6 @@
 #### 启动活动的最佳写法
 
-```
+```java
 //好处是可以告诉第一个activity需要的参数个数
 public static void actionStart(Context context, String data1, String data2) {
         Intent intent = new Intent(context, SecondActivity.class);
@@ -10,18 +10,18 @@ public static void actionStart(Context context, String data1, String data2) {
     }
 ```
 
-```
+```java
 //在当前activity中启动第二个activity:
 SecondActivity.actionStart(this, "data1", "data2");
 ```
 
 #### 获取view的正确方式
-```
+```java
 View headView = LayoutInflater.from(this).inflate(R.layout.more_head, (ViewGroup) findViewById(android.R.id.content), false);
 ```
 
 #### 判断字符串是否是数字
-```
+```java
 String test = "1234";
 String test2 = "1234a";
 boolean digitsOnly = TextUtils.isDigitsOnly(test); //true
@@ -29,13 +29,13 @@ boolean digitsOnly1 = TextUtils.isDigitsOnly(test2); //false
 ```
 
 #### 字符串拼接
-```
+```java
 //1 字符串拼接
 CharSequence concat = TextUtils.concat("aaa", "bbb", "ccc");
 ```
 
 #### 比较两个字符串是否相等, 做了非null判断
-```
+```java
 String test = "1234";
 String test2 = "1234a";
 String test3 = null;
@@ -44,7 +44,7 @@ boolean equals2 = TextUtils.equals(test, test3); //false
 ```
 
 #### 时间格式化
-```
+```java
 long time = 1479037043000l;
 String s = DateUtils.formatDateTime(this, time, DateUtils.FORMAT_SHOW_DATE); //11月13日
 
@@ -62,13 +62,13 @@ CharSequence time = DateUtils.getRelativeTimeSpanString(System.currentTimeMillis
 ```
 
 #### Android 彻底退出应用
-```
+```java
 android.os.Process.killProcess(android.os.Process.myPid()); //方式1
 System.exit(0); //方式2
 ```
 
 #### Android屏幕操作
-```
+```java
 //如果当期不是横屏
 if (context.getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
    context.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);// 设置为横屏
