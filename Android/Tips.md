@@ -132,3 +132,22 @@ String book=getResources().getString(R.string.book);
 String bookTest=String.format(book,"金瓶梅","西门庆",2249,88.3f);
 System.out.println("bookTest="+bookTest);//bookTest=书名 (字符串)金瓶梅,作者(字符串)西门庆,编号(整数)2249,价格(浮点型)：88.30
 ```
+
+#### 使用UncaughtExceptionHandler捕获全局异常
+首先实现创建一个类，实现UncaughtExceptionHandler接口。代码如下：
+```java
+public class CrashHandler implements UncaughtExceptionHandler{
+
+	@Override
+        public void uncaughtException(Thread thread, Throwable ex){
+		//处理异常
+		Log.e("崩溃",thread.getName()+ex.toString());
+		//发送到服务器//dialog提醒
+	}
+
+}
+```
+在程序的入口activity的oncreate中添加：
+```java
+Thread.setDefaultUncaughtExceptionHandler(new CrashHandler());
+```
