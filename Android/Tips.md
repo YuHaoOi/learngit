@@ -151,3 +151,9 @@ public class CrashHandler implements UncaughtExceptionHandler{
 ```java
 Thread.setDefaultUncaughtExceptionHandler(new CrashHandler());
 ```
+
+## 保留两位小数 
+```java
+BigDecimal bigDecimal = new BigDecimal(d).setScale(2, BigDecimal.ROUND_HALF_UP);//四舍五入保留小数点后两位 93.56789 = 93.57
+bigDecimal.toString() //获取String数值
+```
