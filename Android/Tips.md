@@ -85,26 +85,38 @@ getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN , WindowManager
 
 //进入全屏、退出全屏
 private void full(boolean enable) {
-if (enable) {
+    if (enable) {
         WindowManager.LayoutParams lp =  getActivity().getWindow().getAttributes();
-lp.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
-getActivity().getWindow().setAttributes(lp);
-getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-} else {
+        lp.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        getActivity().getWindow().setAttributes(lp);
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    } else {
         WindowManager.LayoutParams attr = getActivity().getWindow().getAttributes();
-attr.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
-getActivity().getWindow().setAttributes(attr);
-getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-}
+        attr.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getActivity().getWindow().setAttributes(attr);
+	getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    }
 }
 //屏幕变化监听
 @Override
 public void onConfigurationChanged(Configuration newConfig) {
-super.onConfigurationChanged(newConfig);
+    super.onConfigurationChanged(newConfig);
     if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){ //横屏
-} else {
-}
+    } else {
+    }
 }
 
+```
 
+#### CountDownTimer倒计时
+```java
+CountDownTimer timer = new CountDownTimer(60000, 1000) { //总时间，间隔时间
+    @Override
+    public void onTick(long millisUntilFinished) { //每隔间隔时间执行一次
+    }
+    @Override
+    public void onFinish() { //总时间后执行
+    }
+ };
+timer.start(); //开始倒计时
 ```
