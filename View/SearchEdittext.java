@@ -1,4 +1,3 @@
-```java
 package com.jlkf.yjgc_ygd.widget;
 
 import android.content.Context;
@@ -157,4 +156,3 @@ public class SearchEdittext extends EditText implements TextWatcher, View.OnFocu
     }
 
 }
-```
