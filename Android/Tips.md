@@ -3,23 +3,6 @@
 Drawable TopDrawableOne = ContextCompat.getDrawable(context,R.drawable.icon_test);
 ```
 
-#### 启动活动的最佳写法
-
-```java
-//好处是可以告诉第一个activity需要的参数个数
-public static void actionStart(Context context, String data1, String data2) {
-        Intent intent = new Intent(context, SecondActivity.class);
-        intent.putExtra("param1", data1);
-        intent.putExtra("param2", data2);
-        context.startActivity(intent);
-    }
-```
-
-```java
-//在当前activity中启动第二个activity:
-SecondActivity.actionStart(this, "data1", "data2");
-```
-
 #### 获取view的正确方式
 ```java
 View headView = LayoutInflater.from(this).inflate(R.layout.more_head, (ViewGroup) findViewById(android.R.id.content), false);
