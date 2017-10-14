@@ -1,3 +1,8 @@
+#### 获取drawable的推荐方式
+```java
+Drawable TopDrawableOne = ContextCompat.getDrawable(context,R.drawable.icon_test);
+```
+
 #### 启动活动的最佳写法
 
 ```java
