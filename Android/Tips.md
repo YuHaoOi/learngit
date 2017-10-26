@@ -1,3 +1,11 @@
+#### EditText格式化手机号
+```java
+EditText infoEt = (EditText) findViewById(R.id.info_et);
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+    infoEt.addTextChangedListener(new PhoneNumberFormattingTextWatcher(Locale.CHINA.getCountry()));//185 8908 0625
+}
+```
+
 #### 获取drawable的推荐方式
 ```java
 Drawable TopDrawableOne = ContextCompat.getDrawable(context,R.drawable.icon_test);
