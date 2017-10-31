@@ -1,17 +1,17 @@
 ```xml
 <com.jlkf.jdsaleside.home.widgets.ClearEditText
-            android:id="@+id/info_ev"
-            android:background="@null"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:maxLength="10"
-            android:hint="请输入贷款金额"
-            android:paddingRight="@dimen/theme_padding"
-            android:layout_marginLeft="105dp"
-            android:textColorHint="@color/theme_text_grey"
-            android:textSize="@dimen/theme_text_small"
-            android:textColor="@color/theme_text" />
+    android:id="@+id/info_ev"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:maxLength="10"
+    android:hint="请输入贷款金额"
+    android:paddingRight="@dimen/theme_padding"
+    android:layout_marginLeft="105dp"
+    android:textColorHint="@color/theme_text_grey"
+    android:textSize="@dimen/theme_text_small"
+    android:textColor="@color/theme_text" />
 ```
 
 ```java
