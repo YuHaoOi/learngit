@@ -1,3 +1,5 @@
+![image](https://github.com/YuHaoOi/learngit/blob/master/pics/image.png)
+
 ```xml
 <com.jlkf.jdsaleside.home.widgets.ClearEditText
     android:id="@+id/info_ev"
