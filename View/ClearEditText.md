@@ -1,4 +1,4 @@
-![image](https://github.com/YuHaoOi/learngit/blob/master/pics/image.png)
+![image](https://github.com/YuHaoOi/learngit/blob/master/pics/clear_edittext.png)
 
 ```xml
 <com.jlkf.jdsaleside.home.widgets.ClearEditText
